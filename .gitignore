@@ -1,0 +1,8 @@
+# Database
+database/storage/*
+!database/storage/.keep
+
+# API
+app/app/public/api/*
+app/app/public/api/.*
+!app/app/public/api/.keep
