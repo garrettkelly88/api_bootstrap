@@ -1,15 +1,5 @@
 version: "3.7"
 services:
-  codegen:
-    image: swaggerapi/swagger-generator
-    container_name: swagger_codegen
-    ports:
-      - 81:80
-      - 8081:8080
-    networks:
-      - app_network
-    environment:
-      - GENERATOR_HOST=http://10.0.0.110
   app:
     build:
       context: ./app

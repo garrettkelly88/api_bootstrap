@@ -3,6 +3,8 @@ database/storage/*
 !database/storage/.keep
 
 # API
+app/app/database_info.php
 app/app/public/api/*
 app/app/public/api/.*
-!app/app/public/api/.keep
+!app/app/public/api/.htaccess
+!app/app/public/api/index.example.php

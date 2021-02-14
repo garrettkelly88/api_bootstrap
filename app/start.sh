@@ -80,13 +80,17 @@ echo "Clearing any old processes..."
 rm -f /run/apache2/apache2.pid
 rm -f /run/apache2/httpd.pid
 
-rm -Rf /app/public/api/*
-rm -Rf /app/public/api/.*
+#rm -Rf /app/public/api/*
+#rm -Rf /app/public/api/.*
 
-git -C /app/public/api clone -b swaggerhub https://github.com/garrettkelly88/plaudit.git ./
-cd /app/public/api/slim
-composer require slim/slim:3.*
-#ln -s /app/images /app/public
+#git -C /app/public/api clone -b swaggerhub https://github.com/garrettkelly88/plaudit.git ./
+cd /app/public/api
+composer require slim/slim:"4.*"
+composer require slim/psr7
+composer require nyholm/psr7 nyholm/psr7-server
+composer require guzzlehttp/psr7 http-interop/http-factory-guzzle
+composer require laminas/laminas-diactoros
+composer require sergeytsalkov/meekrodb
 
 chown -R apache:apache /app && chmod -R 755 /app
 
